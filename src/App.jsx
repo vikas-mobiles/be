@@ -14,7 +14,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/admin" element={<AdminPage />} />
+            <Route path={import.meta.env.VITE_ADMIN_URL} element={<AdminPage />} />
             <Route path="/cart" element={<CartPage />} />
           </Routes>
         </div>

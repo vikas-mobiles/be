@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-import { ADMIN_URL } from '../config/constants';
 
 function Navbar() {
   const { cart } = useCart();
@@ -25,7 +24,7 @@ function Navbar() {
                 </span>
               )}
             </Link>
-            <Link to={ADMIN_URL} className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">
+            <Link to={import.meta.env.VITE_ADMIN_URL} className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">
               Admin
             </Link>
           </div>
